@@ -64,6 +64,7 @@ describe "basic enum" do
   
   it "makes values comparable" do
     Color::RED.should < Color::GREEN
+    Color::RED.should_not == Status::NOT_STARTED
   end
 end
 

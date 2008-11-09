@@ -33,5 +33,17 @@ module Renum
       index <=> other.index
     end
     
+    # Alias +== other+
+    def eql? other
+      self == other
+    end
+    
+    # Compare other with this object by their +name+ and +class+ attributes.
+    # The same functionallity can be achieved by using the +equal?+ method,
+    # but this is a little bit more expressive.
+    def == other
+      self.class == other.class && self.name == other.name
+    end
+    
   end
 end
